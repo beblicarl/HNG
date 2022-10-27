@@ -7,6 +7,6 @@ app.get('/', (req, res) => {
     res.send({ "slackUsername": "beblicarl", "backend": true, "age": 28, "bio": "Backend developer" })
   })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server is running on PORT ${PORT}`)
   })
